@@ -1,8 +1,8 @@
 package Ejemplo;
 
 public class Departamento {
-	private String dname, city;
-	private int dept_number;
+	private String dname, city,dept_number;
+
 	
 	public Departamento(){
 		
@@ -11,7 +11,7 @@ public class Departamento {
 		this.dname = dname;
 	}
 	
-	public Departamento(String dname, String city, int dept_number) {
+	public Departamento(String dname, String city, String dept_number) {
 		super();
 		this.dname = dname;
 		this.city = city;
@@ -30,12 +30,13 @@ public class Departamento {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public int getDept_number() {
+	public String getDept_number() {
 		return dept_number;
 	}
-	public void setDept_number(int dept_number) {
+	public void setDept_number(String dept_number) {
 		this.dept_number = dept_number;
 	}
+
 	
 	
 

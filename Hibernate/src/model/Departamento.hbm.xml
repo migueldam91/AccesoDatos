@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 04-nov-2015 12:16:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.Departamento" table="DEPARTAMENTO" schema="PUBLIC" catalog="DBH2HIBERNATE">
+        <id name="numDept" type="int">
+            <column name="NUM_DEPT" />
+            <generator class="assigned" />
+        </id>
+        <property name="dnombre" type="string">
+            <column name="DNOMBRE" length="15" />
+        </property>
+        <property name="ciudad" type="string">
+            <column name="CIUDAD" length="15" />
+        </property>
+        <set name="empleados" table="EMPLEADO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NUM_DEPT" />
+            </key>
+            <one-to-many class="model.Empleado" />
+        </set>
+    </class>
+</hibernate-mapping>

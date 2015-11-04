@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 04-nov-2015 12:16:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.Empleado" table="EMPLEADO" schema="PUBLIC" catalog="DBH2HIBERNATE">
+        <id name="numEmp" type="int">
+            <column name="NUM_EMP" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="departamento" class="model.Departamento" fetch="select">
+            <column name="NUM_DEPT" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="15" />
+        </property>
+        <property name="salario" type="java.lang.Float">
+            <column name="SALARIO" precision="7" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
