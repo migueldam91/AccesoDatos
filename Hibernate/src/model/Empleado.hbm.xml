@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 04-nov-2015 12:16:43 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 11-nov-2015 11:47:56 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="model.Empleado" table="EMPLEADO" schema="PUBLIC" catalog="DBH2HIBERNATE">
         <id name="numEmp" type="int">
